@@ -1,0 +1,46 @@
+button {
+    cursor: pointer;
+    display: block;
+    border: none;
+}
+
+input {
+    display: block;
+    border: none;
+    outline: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    // outline: 2px solid red;
+    max-width: 767px;
+    min-width: 320px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+        max-width: 768px;
+    }
+
+    @media (min-width: 1024px) {
+        max-width: 1140px;
+    }
+
+}
+
+a {
+    text-decoration: none;
+}

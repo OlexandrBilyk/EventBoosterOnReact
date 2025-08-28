@@ -1,0 +1,120 @@
+.header {
+    padding: 100px 0 52px;
+    background-color: transparent;
+
+    background-image: url('/images/header-bg-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 2dpi),
+    (min-resolution: 192dppx) {
+        background-image: url('/images/header-bg-mobile@2x.jpg');
+    }
+
+    @media (min-width:768px) {
+        padding: 40px 0 123px;
+        background-image: url('/images/header-bg-tablet.jpg');
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 2dpi),
+        (min-resolution: 192dppx) {
+            background-image: url('/images/header-bg-tablet@2x.jpg');
+        }
+    }
+
+    @media (min-width:1024px) {
+        padding-bottom: 133px;
+        background-image: url('/images/header-bg-desktop.jpg');
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 2dpi),
+        (min-resolution: 192dppx) {
+            background-image: url('/images/header-bg-desktop@2x.jpg');
+        }
+    }
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(30px);
+    border-radius: 0 0 100%;
+    padding: 30px 25px;
+
+    @media (min-width:768px) {
+        padding: 45px 40px 45px 25px;
+        width: 100px;
+        height: 50px;
+    }
+
+    @media (min-width:1024px) {
+        padding: 45px 40px 45px 25px;
+        width: 100px;
+        height: 50px;
+    }
+
+    &Icon {
+        width: 60px;
+        height: 40px;
+
+        @media (min-width:768px) {
+            width: 100px;
+            height: 50px;
+        }
+
+        @media (min-width:1024px) {
+            width: 136px;
+            height: 67px;
+        }
+    }
+}
+
+.title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    text-align: center;
+    color: #dc56c5;
+    max-width: 212px;
+    margin: 0 auto 25px;
+
+    @media (min-width:768px) {
+        font-size: 30px;
+        max-width: 353px;
+        margin-bottom: 27px;
+    }
+
+    @media (min-width:1024px) {
+        font-size: 50px;
+        max-width: 600px;
+        margin-bottom: 52px;
+    }
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+
+    @media (min-width:768px) {
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+
+.input {
+    padding: 10px 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.2);
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #939393;
+}
