@@ -7,7 +7,7 @@ export const eventsApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: 'https://app.ticketmaster.com/discovery/' }),
     endpoints: (builder) => ({
         getEvents: builder.query({
-            query: ({ page = 0, keyword = "", countryCode = "" }) => ({
+            query: ({ page = 0, keyword = "", countryCode = "" } = {}) => ({
                 url: "v2/events.json",
                 params: {
                     apikey: apiKey,
@@ -21,4 +21,4 @@ export const eventsApi = createApi({
     })
 })
 
-export const { useGetEventsQuery, useLazyGetEventsQuery} = eventsApi
+export const { useGetEventsQuery, useLazyGetEventsQuery } = eventsApi
