@@ -1,10 +1,5 @@
 .main {
-    padding-bottom: 60px;
     background-color: #000;
-
-    @media (min-width:1024px) {
-        padding-bottom: 80px;
-    }
 }
 
 .list {
@@ -12,6 +7,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px 40px;
+    padding-bottom: 60px;
 
     @media (min-width:768px) {
         gap: 27px 45px;
@@ -19,6 +15,8 @@
 
     @media (min-width:1024px) {
         gap: 70px 63px;
+        padding-bottom: 80px;
+
     }
 }
 
@@ -97,4 +95,3 @@
         height: 11px;
     }
 }
-

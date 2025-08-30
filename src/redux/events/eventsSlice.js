@@ -7,20 +7,6 @@ export const eventsSlice = createSlice({
         events: []
     },
     reducers: {
-        // addEvent: (state, action) => {
-        //     const { name, date, location, info, who, prices, icon, qr } = action.payload;
-        //     state.events.push({
-        //         id: nanoid(),
-        //         name,
-        //         date,
-        //         location,
-        //         info,
-        //         who,
-        //         prices,
-        //         icon,
-        //         qr
-        //     });
-        // }
         setEvents: (state, action) => {
             state.events = action.payload
         }

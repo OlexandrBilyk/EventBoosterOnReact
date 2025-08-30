@@ -1,0 +1,46 @@
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    span {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        color: #fff;
+
+        @media (min-width:768px) {
+            font-size: 16px;
+        }
+    }
+}
+
+.btn {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background-color: transparent;
+    padding: 5px 12px;
+
+
+    @media (min-width:768px) {
+        font-size: 16px;
+    }
+}
+
+.active {
+    color: #dc56c5;
+    border: 1px solid #dc56c5;
+    border-radius: 10px 0;
+}
