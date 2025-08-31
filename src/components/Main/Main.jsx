@@ -31,7 +31,7 @@ export default function Main({
                 <svg className={styles.locationIcon}>
                   <use href="/icons/symbol-defs.svg#icon-locate"></use>
                 </svg>
-                {locate.venues[0].name}
+                {locate?.venues[0].name}
               </address>
             </li>
           ))}

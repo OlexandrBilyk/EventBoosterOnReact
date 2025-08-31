@@ -8,20 +8,31 @@ import Modal from "./components/Modal/Modal";
 
 export default function App() {
   const dispatch = useDispatch();
-  const { data, isLoading, error } = useGetEventsQuery();
   const [isShow, setIsShow] = useState(false);
   const [id, setId] = useState(null);
   const [keywordValue, setKeywordValue] = useState("");
   const [countryValue, setCountryValue] = useState("");
-  const maxNum = 49;
+  const { data, isLoading, error } = useGetEventsQuery({
+    page: 1,
+    keyword: keywordValue,
+    countryCode: countryValue,
+  });
+  const [maxNum, setMaxNum] = useState(49);
 
   useEffect(() => {
-    console.log(data);
+    console.log();
 
     if (data?._embedded?.events) {
       dispatch(setEvents(data._embedded.events));
+      if (data?.page?.totalPages) {
+        if (data?.page?.totalPages > 49) {
+          setMaxNum(49);
+        } else {
+          setMaxNum(data.page.totalPages);
+        }
+      }
     }
-  }, [dispatch, data]);
+  }, [dispatch, data, keywordValue, countryValue]);
 
   return (
     <>

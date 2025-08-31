@@ -82,16 +82,27 @@ export default function Pagination({ keywordValue, countryValue, maxNum }) {
   }
 
   useEffect(() => {
-    const arr = [
-      { text: 1, active: true },
-      { text: 2, active: false },
-      { text: 3, active: false },
-      { text: 4, active: false },
-      { text: 5, active: false },
-      { text: maxNum, active: false },
-    ];
-    setBtns(arr);
-  }, []);
+    if (maxNum >= 6) {
+      const arr = [
+        { text: 1, active: true },
+        { text: 2, active: false },
+        { text: 3, active: false },
+        { text: 4, active: false },
+        { text: 5, active: false },
+        { text: maxNum, active: false },
+      ];
+      setBtns(arr);
+    } else if (maxNum === 0) {
+      const arr = [{ text: 0, active: true }];
+      setBtns(arr);
+    } else {
+      const arr = Array.from({ length: maxNum }, (_, i) => ({
+        text: i + 1,
+        active: i === 0,
+      }));
+      setBtns(arr);
+    }
+  }, [maxNum]);
 
   return (
     <ul className={styles.list}>
