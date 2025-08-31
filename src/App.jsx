@@ -5,6 +5,8 @@ import { useGetEventsQuery } from "./redux/events/eventsApi";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Modal from "./components/Modal/Modal";
+import Footer from "./components/Footer/Footer";
+
 
 export default function App() {
   const dispatch = useDispatch();
@@ -49,6 +51,7 @@ export default function App() {
         countryValue={countryValue}
         maxNum={maxNum}
       />
+      <Footer></Footer>
       {isShow && <Modal id={id} onClose={() => setIsShow(false)} />}
     </>
   );

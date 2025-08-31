@@ -24,6 +24,13 @@ li {
     list-style-type: none;
 }
 
+body {
+    background-color: #000;
+    background-image: linear-gradient(180deg, rgba(13, 13, 13, 0.19) 0%, rgba(14, 14, 14, 0.8) 100%), url('/images/bg-body.png');
+    background-position: center;
+    background-size: contain;
+}
+
 .container {
     // outline: 2px solid red;
     width: 100%;

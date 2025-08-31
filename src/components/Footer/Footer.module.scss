@@ -1,0 +1,19 @@
+.footer {
+    padding: 60px 0 27px;
+
+    @media (min-width:768px) {
+        padding-bottom: 18px;
+    }
+
+    @media (min-width:1024px) {
+        padding-top: 80px;
+    }
+}
+
+.text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #939393;
+}
